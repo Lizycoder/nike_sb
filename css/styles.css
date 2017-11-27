@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+body {
+	background-image: url('../img/Group.png'), url('../img/Layer_5.png') ;
+	background-color:#c6c5c8;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font: 14px/1.2 Lato, Arial, sans-serif;
+}
+.card {
+	width: 686px;
+	height:391px;
+	font-size:0;
+	background-color:#111a28;
+	border-radius:10px;
+	box-shadow: 0 0 65px rgba(0,0,0,.82);
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	 
+}
+.card__gallery, .card__info {
+	display: inline-block;
+	vertical-align:middle;
+	height:100%;
+}
+.card__gallery{
+	width:410px;
+	position:relative;
+}
+.card__info {
+	width: calc(100% - 410px);
+}
+.card__logo {
+	position:absolute;
+	top:20px;
+	left:20px;
+}
+.card__image {
+	max-width:100%;
+	max-height:100%;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+}
+
+.card__color {
+	position:absolute;
+	bottom:20px;
+	left:10px;
+	right:10px;
+	text-align: center;
+	padding:0;
+	margin:0;
+	
+}
+.card__color-select {
+	display:inline-block;
+	height:8px;
+	width: 8px;
+	margin-bottom: 5px;
+	border: 1.5px solid transparent;
+	transition:all .2s linear;
+}
+.card__color-select:not(:last-of-type) {
+	margin-right:5px;	
+	}
+.card__color-link {
+	text-decoration: none;
+	font-size: 0;
+	border-radius: 50%;
+	height:100%;
+	width:100%;
+	padding:4px;
+	
+}
+.card__color-link--1 {
+	background-color:#1f273f;
+}
+.card__color-link--2 {
+	background-color:#fff;
+}
+.card__color-link--3{
+	background-color:#ed3333;
+}
+.card__color-link--4 {
+	background-color:#29e3ea;
+}
+.card__color-link:hover,
+.card__color-link:active,
+.card__color-link:focus,
+.card__color-link.active {
+	border: 1.5px solid #7b8188;
+	outline:none;
+}
+.card__info {
+	color:#c6c5c8;
+	padding:70px 40px;
+	
+}
+.card__title {
+	font-size:24px;
+	line-height:26px;
+	height: 52px;
+	letter-spacing:1px;
+	overflow:hidden;
+	margin:10px 0;
+}
+.card__type {
+	font-size:14px;
+	height: 16px;
+	letter-spacing:1px;
+	margin:0;
+	line-height:1;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	cursor:pointer;
+}
+.card__type:hover {
+	overflow:visible;
+	white-space:normal;
+}
+.card__rating {
+	padding: 0;
+	margin:26px 0;
+}
+.card__stars {
+	width:12px;
+	height:12px;
+	display:inline-block;
+	background-image: url('../img/star2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition:all .25s linear;
+}
+.card__rating[data-stars="1"] .card__stars:nth-of-type(n+2){
+	background-image: url('../img/star.png');
+}
+.card__rating[data-stars="2"] .card__stars:nth-of-type(n+3){
+	background-image: url('../img/star.png');
+}
+.card__rating[data-stars="3"] .card__stars:nth-of-type(n+4){
+	background-image: url('../img/star.png');
+}
+.card__rating[data-stars="4"] .card__stars:nth-of-type(n+5){
+	background-image: url('../img/star.png');
+}
+.card__rating[data-stars="5"] .card__stars:nth-of-type(n+6){
+	background-image: url('../img/star.png');
+}
+.card__stars:not(:last-of-type) {
+	margin-right:2px;
+}
+.card__buttons {
+	font-size:14px;	
+}
+.card__sizes, .card__qty{
+	font: 14px/1.2 Lato, Arial, sans-serif;
+	width: 70px;
+	height: 30px;
+	vertical-align:middle;
+	background-color:transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px; 
+	-ms-appearance: none;
+	background-image:url(../img/Rectangle.png);
+	background-repeat:no-repeat;
+	background-position: right 10px center;
+	border:1px solid #80848b;
+	color: #c6c5c8;
+	margin-bottom:30px;
+	padding:0 16px 0 10px;
+	outline:none;
+	transition:all .25s linear;
+}
+.card__sizes::-ms-expand, .card__qty::-ms-expand {
+  display: none;
+}
+.cart__add {
+	font: 14px/1.2 Lato, Arial, sans-serif;
+	width:185px;
+	height:40px;
+	background-color:rgba(225,225,225,.1);
+	color: #fff;
+	border:1px solid #80848b;
+	outline:none;
+}
+.cart__add:hover,
+.cart__add:focus,
+.cart__add:active,
+.card__sizes:hover,
+.card__sizes:active,
+.card__sizes:focus,
+.card__qty:hover,
+.card__qty:active,
+.card__qty:focus {
+	border:1px solid #f7bf16;
+	color:#f7bf16;
+}
